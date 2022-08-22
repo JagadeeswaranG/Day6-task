@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <p> Class,constructor and instances</p>
+    <script>
+
+//Write a class person to hold all details:
+
+        class person{
+    constructor(firstName,number,department,branch){
+        this.firstName = firstName;
+        this.number = number;
+        this.department = department;
+        this.branch = branch;
+    }
+getPersonDetails(){
+    return (`Mr.${this.firstName},Id number ${this.number} is working in ${this.department} 
+    department at ${this.branch} branch.`)
+     
+}
+getPersonNumber(){
+    return(`${this.firstName}-Employee number is ${this.number}`)
+}
+}
+let person1 = new person('kumar','2230','production','chennai');
+let person2 = new person('Raj','8230','QC','coimbatore');
+let person3 = new person('Balu','4825','shipping','vizag');
+let person4 = new person('sundar','1380','RD','Bangalore');
+
+console.log(person4.getPersonDetails());
+console.log(person4.branch);
+console.log(`${person1.getPersonNumber()},${person2.getPersonNumber()},
+${person3.getPersonNumber()},${person4.getPersonNumber()}.`);
+
+
+    </script>
+</body>
+</html>

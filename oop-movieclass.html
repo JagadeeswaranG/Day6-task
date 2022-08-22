@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <p> Class,constructor and instances</p>
+    <script>
+
+//Class Movie
+
+        class Movie{
+    constructor(title,studio,rating = "PG"){
+        this.title = title;
+        this.studio = studio;
+        this.rating = rating;
+    }
+  
+    getFilmDetails(){
+        return (`The film is ${this.title}, which is produced by ${this.studio} and its Rating ${this.rating}`);
+    }
+    getPG(){
+        if(this.rating === "PG"){
+           
+           return(`The rating of ${this.title} is ${this.rating}`);
+        }else{
+             
+            return(`The rating of ${this.title} is ${this.rating}`);
+         }        
+        
+    }
+}
+let film1 = new Movie("Viruman","2D Entertainment","5.8");
+let film2 = new Movie("The Warrior","Srinivas Silverscreen");
+let film3 = new Movie("Rocketry","Tricolour Films","9");
+let film4 = new Movie("RRR","DVV Entertainment");
+let film5 = new Movie("Casino Royale","Eon Production","13");
+
+console.log(film5.getFilmDetails());
+console.log(film2.getFilmDetails());
+
+console.log(`1)${film1.getPG()},2)${film2.getPG()},3)${film3.getPG()},4)${film4.getPG()},5)${film5.getPG()}`);
+
+
+
+    </script>
+</body>
+</html>

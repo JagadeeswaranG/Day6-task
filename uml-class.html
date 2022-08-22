@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <p> Class,constructor and instances</p>
+    <script>
+// Conver UML diagram to circle class:
+
+class circle{
+    constructor(radius = 1.0,color = "red"){
+        this.radius = radius;
+        this.color = color;
+    }
+    getRadius(){
+        return(`${this.radius}`);
+    }
+    setRadius(rad){
+        this.radius = rad;
+    }
+    getColor(){
+        return(`${this.color}`);
+    }
+    setColor(clr){
+        this.color = clr;
+    }
+    getArea(){
+        var result = Math.PI*this.radius*this.radius;
+        return (result.toFixed(2));
+    }
+    getCircumference(){
+        var circum = 2*Math.PI*this.radius;
+        return(circum.toFixed(2));
+    }
+
+}
+
+let circle1 = new circle();
+let circle2 = new circle(2,"blue");
+let circle3 = new circle(3,"green");
+
+// Get circle1 default values:
+console.log(circle1);
+
+// Get Radius for all circle:
+console.log(`Radius of circle1 is ${circle1.getRadius()},Radius of circle2 is ${circle2.getRadius()},Radius of circle3 is ${circle3.getRadius()}.`);
+
+// setRadius for circle2:
+circle2.setRadius(4);
+console.log(circle2);
+
+// getColor for all circle:
+console.log(`color of circle1 is ${circle1.getColor()},color of circle2 is ${circle2.getColor()},color of circle3 is ${circle3.getColor()}.`);
+
+// setColor for circle4:
+circle3.setColor("yellow");
+console.log(circle3);
+
+// getArea for all circle :
+console.log(`Area of circle1 is ${circle1.getArea()},Area of circle2 is ${circle2.getArea()},Area of circle3 is ${circle3.getArea()}`);
+
+// getCircumference for all circle:
+console.log(`Cicrum of circle1 is ${circle1.getCircumference()},Cicrum of circle2 is ${circle2.getCircumference()},Cicrum of circle3 is ${circle3.getCircumference()}`);
+
+
+    </script>
+</body>
+</html>
